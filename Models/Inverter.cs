@@ -1,22 +1,19 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace teste_tecnico_even3.Models
 {
     class Inverter
     {
-        public string Texto { get; }
 
-        public Inverter(string texto)
+        public static string InverterTexto(string texto)
         {
-            Texto = texto;
-        }
+            string vaziaString = "";
 
-        public string InverterTexto()
-        {
-            return new string(Texto.Reverse().ToArray());
+            for (int i = texto.Length - 1; i >= 0; i--)
+            {
+                vaziaString += texto[i]; 
+            }
+            return vaziaString;
         }
     }
 

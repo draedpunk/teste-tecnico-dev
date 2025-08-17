@@ -5,23 +5,23 @@ namespace teste_tecnico_even3.Models
 {
     public class NumerosNaoRepetidos
     {
-        public static void ContagemNumeros(int[] numeros)
+        public static void ExibirNumerosUnicos(int[] numeros)
         {
             var contagem = new Dictionary<int, int>();
 
-            foreach (int num in numeros)
+            foreach (int chave in numeros)
             {
-                if (contagem.ContainsKey(num))
-                    contagem[num]++;
+                if (contagem.ContainsKey(chave))
+                    contagem[chave]++;
                 else
-                    contagem[num] = 1;
+                    contagem[chave] = 1;
             }
 
-            foreach (var unico in contagem)
+            foreach (var valor in contagem)
             {
-                if (unico.Value == 1)
+                if (valor.Value == 1)
                 {
-                    Console.WriteLine(unico.Key);
+                    Console.WriteLine(valor.Key);
                 }
             }
         }

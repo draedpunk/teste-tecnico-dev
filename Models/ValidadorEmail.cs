@@ -1,20 +1,16 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace teste_tecnico_even3.Models
 {
     public class ValidadorEmail
     {
-        public string Email { get; }
-        public static string VerificarEmail(string Email)
+        public static string VerificarEmail(string email)
         {
-            if (!Email.Contains("@") && !Email.Contains("."))
+            if (!email.Contains("@") || !email.Contains("."))
             {
-                return "Email inválido";
+                return "Email invalido";
             }
-            return "Email válido";
+            return "Email valido";
         }
 
 
